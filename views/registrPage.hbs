@@ -1,0 +1,37 @@
+<div class="container", style="width: 550px;">
+
+<form action="/auth/registruser" method="POST">
+   {{#if error}}
+       <div id="emailHelp" class="alert alert-danger" role="alert" >{{error}}</div>
+   {{/if}}
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">F.I.O</label>
+    <input type="text" class="form-control" name="name" placeholder="To'liq ismingiz" id="exampleInputPassword1" value="{{oldText.name}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@email.com" name="email" aria-describedby="emailHelp" value="{{oldText.email}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Telfon raqam</label>
+    <input type="tel" class="form-control" name="telNumber" id="exampleInputEmail1" placeholder="+998 90 123 45 67" aria-describedby="emailHelp" value="{{oldText.telNumber}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Parol</label>
+    <input type="password" class="form-control" name="password" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Parolni tasdiqlash</label>
+    <input type="password" class="form-control" name="password2" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>

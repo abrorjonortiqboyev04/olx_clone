@@ -1,0 +1,37 @@
+    <div class="container", style="width: 500px; margin: 40px 30%">
+        <form action="/user/addproduct" method="POST" enctype="multipart/form-data">
+            {{#if error}}
+                <div id="emailHelp" class="alert alert-danger" role="alert" >{{error}}</div>
+            {{/if}}
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nom: </label>
+                    <input type="text" class="form-control" name="name" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Narx (so'm):  </label>
+                    <input type="number" class="form-control" id="exampleInputEmail1"  name="price" aria-describedby="emailHelp" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Rasm: </label>
+                    <input type="file" class="form-control" name="image" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Qo'shimcha malumotlar: </label>
+                    <textarea class="form-control" placeholder="Leave a comment here" name="description" id="floatingTextarea"></textarea>
+                </div>
+                
+                <select class="form-select form-select-sm" name="category" aria-label=".form-select-sm example">
+                    <option>Kategoriyani tanlang...</option>
+                    <option value="texnika">Elektro texnika</option>
+                    <option value="mashina">Avtomobil</option>
+                    <option value="uy">Ko'chmas mulk</option>
+                    <option value="ish">Ish o'rinlari</option>
+                </select>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>

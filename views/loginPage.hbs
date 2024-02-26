@@ -1,0 +1,21 @@
+<div class="container", style="width: 550px;">
+
+<form action="/auth/loginuser", method="POST">
+   {{#if error}}
+       <div id="emailHelp" class="alert alert-danger" role="alert">{{error}}</div>
+   {{/if}}
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" value="{{oldText}}">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Parol</label>
+    <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Salom</button>
+</form>
+
+</div>
